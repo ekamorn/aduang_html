@@ -491,25 +491,7 @@
 	<!-- Bootstrap Core Js -->
 	<script src="bootstrap-4.0.0-beta-dist/js/bootstrap.min.js"></script>
 	<!-- Display Data Js -->
-	<script src="js/all-display-final.js"></script>
-
-	<!-- <script src=js/all-display-final.js></script> -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-
-			$.ajax({
-				url: 'http://localhost/a-duangHTML-final/web_client_service/display_client_service.php',
-				type: 'GET',
-				dataType: 'json',
-				error:function(){
-					console.log('web error');
-				},
-				success:function(data) {
-					console.log(data);
-				}
-			});
-		});	
-	</script>
+	<script src="js/today-display.js"></script>
 
 	<!-- jQuery easing scrolling Core Js -->
 	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>

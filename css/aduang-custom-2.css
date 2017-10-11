@@ -1362,7 +1362,7 @@ body.active,
 @media(min-width: 1260px) {
 	body{
 		background: url(../image/bg1.png) no-repeat;
-		background-size: 150%;
+		background-size: 200%;
 
 	}
 	.x1 {
@@ -1443,6 +1443,9 @@ body.active,
 		min-height: 440px;
 	}
 	
+	.weekly-content-box-collect {
+		min-height: 610px;
+	}
 }
 
 @media(min-width: 1440px) {
@@ -1500,6 +1503,10 @@ body.active,
 
 	.daily-content-box-collect {
 		min-height: 430px;
+	}
+
+	.weekly-content-box-collect {
+		min-height: 580px;
 	}
 }
 
