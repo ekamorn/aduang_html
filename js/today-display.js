@@ -5,7 +5,8 @@ $(document).ready(function(){
 
 	var	thisDayArray = ["sun", "mon", "tue", "wed", "webNight", "thur", "fri", "sat"];
 	var weeklyArray  = ["ap1", "ma1", "jun1", "jul1", "aug1", "sep1", "oct1", "nov1", "dec1", "jan1", "feb1", "mar1"];
-		
+	var	monthlyArray = ["ap2", "ma2", "jun2", "jul2", "aug2", "sep2", "oct2", "nov2", "dec2", "jan2", "feb2", "mar2"];
+
 
 	var dayPicUrl		 = ["image/days/sunday.png", "image/days/monday.png", "image/days/tuesday.png", "image/days/wednesday.png", "image/days/wednesday-night.png", "image/days/thurday.png", "image/days/friday.png", "image/days/saturday.png"];
 	var zodiacPicUrl = ["image/zodiac/1.png", "image/zodiac/2.png", "image/zodiac/3.png", "image/zodiac/4.png", "image/zodiac/5.png", "image/zodiac/6.png", "image/zodiac/7.png", "image/zodiac/8.png", "image/zodiac/9.png", "image/zodiac/10.png", "image/zodiac/11.png", "image/zodiac/12.png"];
@@ -229,11 +230,58 @@ $(document).ready(function(){
 			var lengthZodiacContents = allContents[i].contents.length;
 			var eachZodiacContents	 = allContents[i].contents;
 
+			// return push name zodiac array
+			var eachZodiacName = pushZodiacName(i);
+			zodiacNameArray.push(eachZodiacName);
+
+			var monthlyBadge					 = document.createElement('div');
+					monthlyBadge.className = 'col-lg-3 col-md-3 col-sm-6 col-xl-3 col-12 mx-auto horo-daily-each--box item';
+					monthlyBadge.innerHTML = 
+					'<div class="head-each-topic-collect">' +
+						'<div class="head-day-pic-collect">' +
+							'<img class="img-reponsive day-pic weekly-pic" src="' + zodiacPicUrl[i] + '">' +
+						'</div>' +
+						'<p class="head-each-day">' + zodiacNameArray[i] + '</p>' +
+					'</div>' +
+					'<div class="daily-content-box-collect monthly-content-box-collect">' + '</div>';
+
+			if (windowWidth < 1260) {
+
+			} else {
+				document.getElementById('monthly--desktop-screen').appendChild(monthlyBadge);
+			}
+
+			$('.monthly-content-box-collect').each(function(index) {
+				$(this).attr('id', monthlyArray[index]);
+			});
+
 			for (var j = 0; j<lengthZodiacContents; j++) {
 				var eachTopicContents = eachZodiacContents[j];
 				var eachTitleContents = eachZodiacContents[j].title;
 				var eachTextContents  = eachZodiacContents[j].text;
+
+				var contentMonth = document.createElement('p');
+						contentMonth.className = 'daily-content-collect';
+						contentMonth.innerHTML =
+						eachTitleContents + eachTextContents;
+
+				document.getElementById(monthlyArray[i]).appendChild(contentMonth);
 			}
+		}
+	});
+
+
+	// get year url for displaying data
+	CallService('/a-duangHTML-final/web_client_service/display_client_service_weekly.php', false, function(msg) {
+		var allContents 	= msg.contents;
+		var contentLength = msg.contents.length
+		// console.log('test display data: ' + contentLength);
+
+		for (var i =0; i<contentLength; i++) {
+			var lengthZodiacContents = allContents[i].contents.length;
+			var eachZodiacContents 	 = allContents[i].contents;
+
+			// return 
 		}
 	});
 
