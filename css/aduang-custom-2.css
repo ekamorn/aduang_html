@@ -1443,7 +1443,9 @@ body.active,
 		min-height: 440px;
 	}
 	
-	.weekly-content-box-collect {
+	.weekly-content-box-collect,
+	.monthly-content-box-collect,
+	.year-content-box-collect {
 		min-height: 610px;
 	}
 }
@@ -1505,7 +1507,9 @@ body.active,
 		min-height: 430px;
 	}
 
-	.weekly-content-box-collect {
+	.weekly-content-box-collect,
+	.monthly-content-box-collect,
+	.year-content-box-collect {
 		min-height: 580px;
 	}
 }
