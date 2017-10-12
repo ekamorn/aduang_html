@@ -8,6 +8,10 @@ $(document).ready(function(){
 	var	monthlyArray = ["ap2", "ma2", "jun2", "jul2", "aug2", "sep2", "oct2", "nov2", "dec2", "jan2", "feb2", "mar2"];
 	var yearArray		 = ["ap3", "ma3", "jun3", "jul3", "aug3", "sep3", "oct3", "nov3", "dec3", "jan3", "feb3", "mar3"];
 
+	var weeklyBigArray  = ["ap11", "ma11", "jun11", "jul11", "aug11", "sep11", "oct11", "nov11", "dec11", "jan11", "feb11", "mar11"];
+	var monthlyArrayM = ["ap22", "ma22", "jun22", "jul22", "aug22", "sep22", "oct22", "nov22", "dec22", "jan22", "feb22", "mar22"];
+	var yearArrayM 	 = ["ap33", "ma33", "jun33", "jul33", "aug33", "sep33", "oct33", "nov33", "dec33", "jan33", "feb33", "mar33"];
+
 
 	var dayPicUrl		 = ["image/days/sunday.png", "image/days/monday.png", "image/days/tuesday.png", "image/days/wednesday.png", "image/days/wednesday-night.png", "image/days/thurday.png", "image/days/friday.png", "image/days/saturday.png"];
 	var zodiacPicUrl = ["image/zodiac/1.png", "image/zodiac/2.png", "image/zodiac/3.png", "image/zodiac/4.png", "image/zodiac/5.png", "image/zodiac/6.png", "image/zodiac/7.png", "image/zodiac/8.png", "image/zodiac/9.png", "image/zodiac/10.png", "image/zodiac/11.png", "image/zodiac/12.png"];
@@ -110,7 +114,6 @@ $(document).ready(function(){
 	CallService('http://localhost/a-duangHTML-final/web_client_service/display_client_service.php', true, function(msg){
 		var allContents 	= msg.contents;
 		var contentLength = msg.contents.length;
-		// console.log(allContents);
 		var dayNameArray		= [];
 
 		for(var i = 0; i<contentLength; i++) {
@@ -119,9 +122,6 @@ $(document).ready(function(){
 
 			var eachDayName = pushDayName(i);
 			dayNameArray.push(eachDayName);
-			// console.log(dayNameArray);
-			
-			// console.log("test log array contents: " + lengthDayContents);
 
 			// Create div for displaying the horoscope today
 			var todayBadge 					 = document.createElement('div');
@@ -135,11 +135,27 @@ $(document).ready(function(){
 					'</div>' + 
 					'<div class="daily-content-box-collect today-content-box-collect">' + '</div>';
 
+			var todayBadgeMobile 					 = document.createElement('div');
+					todayBadgeMobile.className = 'head-each-topic-collect';
+					todayBadgeMobile.innerHTML =
+					'<div class="head-day-pic-collect">' +
+						'<img class="img-reponsive day-pic" src="' + dayPicUrl[i] + '">' +
+						'<p class="head-each-day">' + dayNameArray[i] + '</p>' +
+					'</div>';
+
+			var todayInsideBadge 					 = document.createElement('div');
+					todayInsideBadge.className = 'daily-content-box-collect today-content-box-collect';
+
 			// build div for displaying by following the screen width
 			if (windowWidth < 1260) {
 
+				document.getElementById(i).appendChild(todayBadgeMobile);
+				document.getElementById(i).appendChild(todayInsideBadge);
+
 			} else {
+
 				document.getElementById('daily--desktop-screen').appendChild(todayBadge);
+			
 			}
 
 			$(".today-content-box-collect").each(function(index) {
@@ -150,8 +166,6 @@ $(document).ready(function(){
 				var eachTopicContents = eachDayContents[j];
 				var eachTitleContents = eachDayContents[j].title;
 				var eachTextContents  = eachDayContents[j].text;
-				// console.log("test log title: " + eachTitleContents);
-				// console.log("test log text: " + eachTextContents);
 
 				var todayHoroContents				= document.createElement('p');
 				todayHoroContents.className = 'daily-content-collect';
@@ -190,16 +204,31 @@ $(document).ready(function(){
 					'</div>' +
 					'<div class="daily-content-box-collect weekly-content-box-collect">' + '</div>';
 
+			var weeklyBadgeMobile 					= document.createElement('div');
+					weeklyBadgeMobile.className = 'head-each-topic-collect';
+					weeklyBadgeMobile.innerHTML =
+					'<div class="head-day-pic-collect">' +
+						'<img class="img-reponsive day-pic weekly-pic" src="' + zodiacPicUrl[i] + '">' +
+						'<p class="head-each-day">' + zodiacNameArray[i] + '</p>'
+					'</div>';
+
+			var weeklyInsideBadge = document.createElement('div');
+					weeklyInsideBadge.className = 'daily-content-box-collect weekly-content-box-collect';
 
 			// build div for displaying by following window.width()
 			if (windowWidth < 1260) {
 
+				document.getElementById(weeklyArray[i]).appendChild(weeklyBadgeMobile);
+				document.getElementById(weeklyArray[i]).appendChild(weeklyInsideBadge);
+
 			} else {
+				
 				document.getElementById('weekly--desktop-screen').appendChild(weeklyBadge);
+			
 			}
 
 			$(".weekly-content-box-collect").each(function(index) {
-				$(this).attr('id', weeklyArray[index]);
+				$(this).attr('id', weeklyBigArray[index]);
 			});
  
 			for (var j = 0; j<lengthZodiacContents; j++) {
@@ -213,7 +242,7 @@ $(document).ready(function(){
 						contentWeek.innerHTML =
 						eachTitleContents + eachTextContents;
 
-				document.getElementById(weeklyArray[i]).appendChild(contentWeek);
+				document.getElementById(weeklyBigArray[i]).appendChild(contentWeek);
 			}
 		}
 		console.log(contentLength);
@@ -246,10 +275,27 @@ $(document).ready(function(){
 					'</div>' +
 					'<div class="daily-content-box-collect monthly-content-box-collect">' + '</div>';
 
+
+			var monthlyBadgeMobile 					 = document.createElement('div');
+					monthlyBadgeMobile.className = 'head-each-topic-collect';
+					monthlyBadgeMobile.innerHTML =
+					'<div class="head-day-pic-collect">' + 
+						'<img class="img-reponsive day-pic weekly-pic" src="' + zodiacPicUrl[i] + '">' +
+						'<p class="head-each-day">' + zodiacNameArray[i] + '</p>' +
+					'</div>';
+
+			var monthlyInsideBadge 					 = document.createElement('div');
+					monthlyInsideBadge.className = 'daily-content-box-collect monthly-content-box-collect';
+
 			if (windowWidth < 1260) {
 
+				document.getElementById(monthlyArrayM[i]).appendChild(monthlyBadgeMobile);
+				document.getElementById(monthlyArrayM[i]).appendChild(monthlyInsideBadge);
+
 			} else {
+				
 				document.getElementById('monthly--desktop-screen').appendChild(monthlyBadge);
+			
 			}
 
 			$('.monthly-content-box-collect').each(function(index) {
@@ -298,10 +344,27 @@ $(document).ready(function(){
 					'</div>' +
 					'<div class="daily-content-box-collect year-content-box-collect">' + '</div>';
 
+			var yearBadgeMobile 					= document.createElement('div');
+					yearBadgeMobile.className = 'head-each-topic-collect';
+					yearBadgeMobile.innerHTML = 
+					'<div class="head-day-pic-collect">' +
+						'<img class="img-reponsive day-pic year-pic" src="' + zodiacPicUrl[i] + '">' +
+						'<p class="head-each-day">' + zodiacNameArray[i] + '</p>' +
+					'</div>';
+
+			var yearInsideBadge = document.createElement('div');
+					yearInsideBadge.className = 'daily-content-box-collect year-content-box-collect';
+
+
 			if (windowWidth < 1260) {
 
+				document.getElementById(yearArrayM[i]).appendChild(yearBadgeMobile);
+				document.getElementById(yearArrayM[i]).appendChild(yearInsideBadge);
+
 			} else {
+
 				document.getElementById('year--desktop-screen').appendChild(yearBadge);
+		
 			}
 
 			$('.year-content-box-collect').each(function(index){

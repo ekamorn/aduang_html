@@ -15,6 +15,8 @@ body {
 	-webkit-background-size: auto,100%;
 	-moz-background-size: auto,100%;
 	background-size: auto,100%;
+
+
 }
 
 h1,
@@ -521,6 +523,17 @@ body.active,
 		background-position: top center;
 	}
 
+	.daily-content-box-collect {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.weekly-content-box-collect,
+	.monthly-content-box-collect,
+	.year-content-box-collect {
+		min-height: 570px;
+	}
+
 	.bubble-collect {
 		position: absolute;
 	}
@@ -774,6 +787,13 @@ body.active,
 		display: block;
 		margin-bottom: 14px;
 	}
+
+	.weekly-content-box-collect,
+	.monthly-content-box-collect,
+	.year-content-box-collect {
+		min-height: 570px;
+	}
+
 }
 
 @media(min-width: 375px) {
@@ -787,6 +807,12 @@ body.active,
 
 	.daily-content-box-collect {
 		min-height: 410px;
+	}
+
+	.weekly-content-box-collect,
+	.monthly-content-box-collect,
+	.year-content-box-collect {
+		min-height: 570px;
 	}
 
 	.big-nav--collection {
@@ -870,6 +896,13 @@ body.active,
 	.horo-button-text--2 {
 		font-size: .75em;
 	}
+
+	#daily--mobile-screen .item,
+	#weekly--mobile-screen .item,
+	#monthly--mobile-screen .item,
+	#year--mobile-screen .item {
+		width: 70%;
+	}
 }
 
 @media(min-width: 600px) {
@@ -934,6 +967,14 @@ body.active,
 
 	.daily-content-box-collect {
 		min-height: 375px;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.weekly-content-box-collect,
+	.monthly-content-box-collect,
+	.year-content-box-collect {
+		min-height: 480px;
 	}
 
 	.big-nav--collection {
@@ -953,6 +994,10 @@ body.active,
 
 	.horo-button-text--2 {
 		font-size: 1.5em;
+	}
+
+	.horo-topic-collection {
+		padding-bottom: 30px;
 	}
 }
 
@@ -1018,6 +1063,13 @@ body.active,
 
 	.horo-button-text--2 {
 		font-size: .75em;
+	}
+
+	#daily--mobile-screen .item,
+	#weekly--mobile-screen .item,
+	#monthly--mobile-screen .item,
+	#year--mobile-screen .item {
+		width: 70%;
 	}
 }
 
@@ -1223,7 +1275,10 @@ body.active,
 		top: -80px;
 	}
 
-	#daily--mobile-screen .item {
+	#daily--mobile-screen .item,
+	#weekly--mobile-screen .item,
+	#monthly--mobile-screen .item,
+	#year--mobile-screen .item {
 		width: 54%;
 	}
 
