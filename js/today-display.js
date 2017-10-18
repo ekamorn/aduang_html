@@ -191,7 +191,6 @@ $(document).ready(function(){
 			// return push name function
 			var eachZodiacName = pushZodiacName(i);
 			zodiacNameArray.push(eachZodiacName);
-			console.log(zodiacNameArray);
 
 			var weeklyBadge 					= document.createElement('div');
 					weeklyBadge.className = 'col-lg-3 col-md-3 col-sm-6 col-xl-3 col-12 mx-auto horo-daily-each--box item';
@@ -235,7 +234,6 @@ $(document).ready(function(){
 				var eachTopicContents = eachZodiacContents[j];
 				var eachTitleContents = eachZodiacContents[j].title;
 				var eachTextContents  = eachZodiacContents[j].text;
-				console.log(eachTitleContents);
 
 				var contentWeek 					= document.createElement('p');
 						contentWeek.className = 'daily-content-collect';
@@ -245,7 +243,7 @@ $(document).ready(function(){
 				document.getElementById(weeklyBigArray[i]).appendChild(contentWeek);
 			}
 		}
-		console.log(contentLength);
+
 	});
 
 
@@ -323,7 +321,6 @@ $(document).ready(function(){
 		var allContents 		= msg.contents;
 		var contentLength 	= msg.contents.length
 		var zodiacNameArray = [];
-		// console.log('test display data: ' + contentLength);
 
 		for (var i =0; i<contentLength; i++) {
 			var lengthZodiacContents = allContents[i].contents.length;
@@ -383,6 +380,30 @@ $(document).ready(function(){
 
 				document.getElementById(yearArray[i]).appendChild(contentYear);
 			}
+		}
+	});
+
+
+	// get articles url for displaying data
+	CallService('/a-duangHTML-final/web_client_service/display_client_service_article', false, function(msg) {
+		var allContents   = msg;
+		var contentLength = msg.length;
+
+		for(var i = 0; i < contentLength; i++) {
+
+			var titleArticle   = allContents[i].title;
+			var textArticle    = allContents[i].text;
+			var coverArticle   = allContents[i].imageUrl;
+			var creatorArticle = allContents[i].creator.nickname;
+			
+			console.log("cover is : " + coverArticle);
+			console.log("Title is : " + titleArticle);
+			console.log("Text is : " + textArticle);
+			console.log("Creator is : " + creatorArticle);
+
+			var queryLinks 					 = document.createElement('a');
+					queryLinks.className = 'article-link-box-collection';
+					
 		}
 	});
 

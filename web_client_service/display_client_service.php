@@ -6,10 +6,13 @@
 	$url_horo_daily = 'http://api.aduang.co/horoscopes/daily/today';
 
 	// headers
-	$headers = 'Content-type: text/html;chaset=utf-8';
+	$headers = 'Content-type: application/json; charset=utf-8';
 
 	// set url for ajax display
 	curl_setopt($ch, CURLOPT_URL, $url_horo_daily);
+
+	// set headers for api url
+	// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 	// return the transfer as a string
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

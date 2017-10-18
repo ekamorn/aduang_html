@@ -2,9 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
+
+	<title>a ดวง</title>
+	<meta name="description" content="aดวง แม่หมอพิมพ์ฟ้า แม่หมอแอเรียล แม่หมอGigoh แม่หมอINKLIST ดูดวง ดวง ทำนายฝัน ดูดวงไพ่ยิบซี ดูดวงฟรี ดวงวันนี้ ดูดวงแม่นๆ ดูดวงเนื้อคู่ ดูดวงความรัก ดูดวงรายวัน ดูดวงรายปักษ์ ดูดวงรายเดือน ดูดวงรายปี">
+	<meta name="keywords" content="aดวง แม่หมอพิมพ์ฟ้า แม่หมอแอเรียล แม่หมอGigoh แม่หมอINKLIST ดูดวง ดวง ทำนายฝัน ดูดวงไพ่ยิบซี ดูดวงฟรี ดวงวันนี้ ดูดวงแม่นๆ ดูดวงเนื้อคู่ ดูดวงความรัก ดูดวงรายวัน ดูดวงรายปักษ์ ดูดวงรายเดือน ดูดวงรายปี">
+	<meta property="og:image" content="http://lek.ots.co.th/a-duangHTML-final/image/ag.png">
+	<meta property="og:url" content="http://lek.ots.co.th/a-duangHTML-final/index">
+	<meta property="og:title" content="aดวง ดูดวงกับแม่หมอ ดูดวงไพ่ยิบซี">
+	<meta property="og:description" content="aดวง แม่หมอพิมพ์ฟ้า แม่หมอแอเรียล แม่หมอGigoh แม่หมอINKLIST ดูดวง ดวง ดูดวงไพ่ยิบซี ดูดวงฟรี ดวงวันนี้ ดูดวงแม่นๆ ดูดวงเนื้อคู่ ดูดวงความรัก ดูดวงรายวัน ดูดวงรายเดือน ดูดวงรายปี">
+	<meta property="og:type" content="website">
+	<meta name="author" content="Ookbee co., Ltd.">
 
 	<!-- Chrome theme -->
 	<meta name="theme-color" content="#2b3143">
@@ -16,8 +26,6 @@
 
 	<!-- Tab icon -->
 	<link rel="icon" type="image/png" href="image/tab_icon_2.png" sizes="32*32">
-
-	<title>a ดวง</title>
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-beta-dist/css/bootstrap.min.css">
@@ -61,17 +69,17 @@
 							<p class="horo-button-text--2">กับ&nbsp;<span class="horo-button-span">a ดวง</span></p>
 						</a>
 
-						<a class="horo-button horo-button--mobile horo-daily js-scroll-trigger" href="#monthly--mobile-screen" name=".monthly-collect-mobile">
+						<a class="horo-button horo-button--mobile horo-daily js-scroll-trigger" href="#monthly--mobile-screen" name=".monthly-collect-mobile" style="display: none;">
 							<p class="horo-button-text--1">ดวงรายเดือน</p>
 							<p class="horo-button-text--2">กับ&nbsp;<span class="horo-button-span">a ดวง</span></p>
 						</a>
 
-						<a class="horo-button horo-button--mobile horo-daily js-scroll-trigger" href="#year--mobile-screen" name=".year-collect-mobile">
+						<a class="horo-button horo-button--mobile horo-daily js-scroll-trigger" href="#year--mobile-screen" name=".year-collect-mobile" style="display: none;">
 							<p class="horo-button-text--1">ดวงรายปี</p>
 							<p class="horo-button-text--2">กับ&nbsp;<span class="horo-button-span">a ดวง</span></p>
 						</a>
 
-						<a class="horo-button horo-button--mobile horo-daily js-scroll-trigger" href="#">
+						<a class="horo-button horo-button--mobile horo-daily js-scroll-trigger" href="#" style="display: none;">
 							<p class="horo-button-text--1">ดวงอื่นๆ</p>
 							<p class="horo-button-text--2">จาก&nbsp;<span class="horo-button-span">a ดวง</span></p>
 						</a>
@@ -86,19 +94,19 @@
 		
 	</div>
 
-	<header class="masthead-intro">
+	<div class="masthead-intro">
 		<!-- Bubble floating -->
 		<div class="bubble-collect">
 			<div class="x1 bubble">
-				<img src="image/bb-2.png" class="img-responsive">
+				<img src="http://lek.ots.co.th/a-duangHTML-final/image/bb-2.png" class="img-responsive">
 			</div>
 
 			<div class="x2 bubble">
-				<img src="image/bb-1.png" class="img-responsive">
+				<img src="http://lek.ots.co.th/a-duangHTML-final/image/bb-1.png" class="img-responsive">
 			</div>
 
 			<div class="x3 bubble">
-				<img src="image/bb-3.png" class="img-responsive">
+				<img src="http://lek.ots.co.th/a-duangHTML-final/image/bb-3.png" class="img-responsive">
 			</div>
 		</div>
 		<!-- /Bubble floating -->
@@ -147,7 +155,7 @@
 
 			</div>
 		</div>
-	</header>
+	</div>
 
 	<!-- Content Section -->
 	<section id="content" class="content-section">
@@ -164,18 +172,18 @@
 						<p class="horo-button-text--2">กับ&nbsp;<span class="horo-button-span">a ดวง</span></p>
 					</a>
 
-					<a class="horo-button horo-monthly js-scroll-trigger" href="#monthly--desktop-screen" name=".monthly-collection">
+					<a class="horo-button horo-monthly js-scroll-trigger" href="#monthly--desktop-screen" name=".monthly-collection" style="display: none;">
 						<p class="horo-button-text--1">ดวงรายเดือน</p>
 						<p class="horo-button-text--2">กับ&nbsp;<span class="horo-button-span">a ดวง</span></p>
 					</a>
 
-					<a class="horo-button horo-year js-scroll-trigger" href="#year--desktop-screen" name=".year-collection">
+					<a class="horo-button horo-year js-scroll-trigger" href="#year--desktop-screen" name=".year-collection" style="display: none;">
 						<p class="horo-button-text--1">ดวงรายปี</p>
 						<p class="horo-button-text--2">กับ&nbsp;<span class="horo-button-span">a ดวง</span></p>
 					</a>
 
-					<a class="horo-button horo-article js-scroll-trigger" href="#" name=".another-collection">
-						<p class="horo-button-text--1">ดวงอื่นๆ</p>
+					<a class="horo-button horo-article js-scroll-trigger" href="#articles-all-links--collection" name=".all-articles-links-collection" style="display: none;>
+						<p class="horo-button-text--1">บทความอื่นๆ</p>
 						<p class="horo-button-text--2">จาก&nbsp;<span class="horo-button-span">a ดวง</span></p>
 					</a>
 				</div>
@@ -237,13 +245,13 @@
 				</div>
 
 				<!-- Another Horo Headbox -->
-				<div class="col-lg-5 col-md-6 col-sm-8 col-xl-4 col-11 mx-auto horo-head-big-box another-collection" id="another-label-box">
+				<div class="col-lg-5 col-md-6 col-sm-8 col-xl-4 col-11 mx-auto horo-head-big-box another-collection all-articles-links-collection" id="another-label-box">
 					<div class="daily-date-box">
 						<p class="daily-box" id="another-date-box">หัวข้อ</p>
 					</div>
 
 					<div class="horo-topic-collection">
-						<p class="horo-topic">ดวงอื่นๆ</p>
+						<p class="horo-topic">บทความอื่นๆ</p>
 						<p class="horo-sub-topic">จาก&nbsp;<span class="horo-sub-topic-span">a ดวง</p>
 					</div>
 				</div>
@@ -276,8 +284,14 @@
 			<!-- /Content Horo Year for desktop -->
 
 			<!-- Content Horo Articles for desktop -->
-			<div class="row main-content all-articles-collect-content all-articles-links-collection" id="articles-all-links--collection">
-				
+			<div class="row main-content daily-collect-content all-articles-collect-content all-articles-links-collection" id="articles-all-links--collection">
+				<a href="#" class="articles-link-box-collection col-lg-2 col-md-2 col-sm-2 col-xl-2 col-6 article-box-collect">
+					<div class="link-cover-box-collect"></div>
+					<div class="link-header-box-collect">
+						<p class="title-links">test test test test test</p>
+						<p class="creator-articles">สร้างโดย: <strong>นายไข่ตุ๋น</strong></p>
+					</div>
+				</a>
 			</div>
 			<!-- /Content Horo Articles for desktop -->
 
