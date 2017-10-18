@@ -111,7 +111,7 @@ $(document).ready(function(){
 	}
 
 	// get daily url for displaying data
-	CallService('http://localhost/a-duangHTML-final/web_client_service/display_client_service.php', true, function(msg){
+	CallService('/a-duangHTML-final/web_client_service/display_client_service.php', true, function(msg){
 		var allContents 	= msg.contents;
 		var contentLength = msg.contents.length;
 		var dayNameArray		= [];
@@ -179,7 +179,7 @@ $(document).ready(function(){
 
 
 	// get weekly url for displaying data
-	CallService('http://localhost/a-duangHTML-final/web_client_service/display_client_service_weekly.php', true, function(msg) {
+	CallService('/a-duangHTML-final/web_client_service/display_client_service_weekly.php', true, function(msg) {
 		var allContents 	  = msg.contents;
 		var contentLength   = msg.contents.length;
 		var zodiacNameArray = [];
@@ -248,7 +248,7 @@ $(document).ready(function(){
 
 
 	// get montly url for displaying data
-	CallService('http://localhost/a-duangHTML-final/web_client_service/display_client_service_weekly.php', true, function(msg){
+	CallService('/a-duangHTML-final/web_client_service/display_client_service_weekly.php', true, function(msg){
 		
 		var allContents 		= msg.contents;
 		var contentLength   = msg.contents.length;
@@ -403,7 +403,7 @@ $(document).ready(function(){
 
 			var queryLinks 					 = document.createElement('a');
 					queryLinks.className = 'article-link-box-collection';
-					
+
 		}
 	});
 

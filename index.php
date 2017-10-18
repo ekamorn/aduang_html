@@ -284,7 +284,7 @@
 			<!-- /Content Horo Year for desktop -->
 
 			<!-- Content Horo Articles for desktop -->
-			<div class="row main-content daily-collect-content all-articles-collect-content all-articles-links-collection" id="articles-all-links--collection">
+			<div class="row main-content daily-collect-content all-articles-collect-content all-articles-links-collection" id="articles-all-links--collection" style="display: none;">
 				<a href="#" class="articles-link-box-collection col-lg-2 col-md-2 col-sm-2 col-xl-2 col-6 article-box-collect">
 					<div class="link-cover-box-collect"></div>
 					<div class="link-header-box-collect">
